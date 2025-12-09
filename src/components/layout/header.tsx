@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="h-[78px] max-600:h-[72px] bg-white rounded-[12px] max-600:rounded-none px-6 items-center justify-between flex">
+    <header className="h-[78px] max-600:h-[72px] bg-white   px-6 items-center justify-between flex">
       <div className="flex items-center gap-2 self-center font-medium">
         <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
           <GalleryVerticalEnd className="size-4" />
