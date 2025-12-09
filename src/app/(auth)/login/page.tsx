@@ -1,25 +1,23 @@
 import { Routes } from "@/constants/routes";
+import LoginForm from "@/features/auth/components/login.form";
 import AuthPageWrapper from "@/features/auth/components/page-wrapper";
-import RegisterForm from "@/features/auth/components/register.form";
 import { Metadata } from "next";
-
 const metadata: Metadata = {
-  title: "Register - Devlinks App",
-  description: "Create an account to start managing your links.",
+  title: "Login - Devlinks App",
+  description: "Add your details below to get back into the app.",
 };
-
-export default function RegisterPage() {
+export default function LoginPage() {
   return (
     <AuthPageWrapper>
       <AuthPageWrapper.Header
-        title="Create your account"
-        subtitle="Let’s get you started sharing your links!"
+        title="Login"
+        subtitle="Add your details below to get back into the app"
       />
-      <RegisterForm />
+      <LoginForm />
       <AuthPageWrapper.Footer
         text="Already have an account?"
         linkText="Login"
-        linkHref={Routes.LOGIN}
+        linkHref={Routes.REGISTER}
       />
     </AuthPageWrapper>
   );

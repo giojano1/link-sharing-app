@@ -6,6 +6,7 @@ import type { UseFormSetError } from "react-hook-form";
 import { ApiError } from "@/lib/api-error";
 import { registerUser } from "../api/auth.api";
 import type { RegisterFormType } from "../types/auth-api.types";
+import { Routes } from "@/constants/routes";
 
 interface UseRegisterOptions {
   setError: UseFormSetError<RegisterFormType>;
@@ -19,7 +20,7 @@ export function useRegister({ setError }: UseRegisterOptions) {
     mutationFn: registerUser,
     onSuccess: () => {
       // Redirect to dashboard on successful registration
-      router.push("/dashboard");
+      router.push(Routes.DASHBOARD);
     },
     onError: (error: ApiError) => {
       // Map API errors to React Hook Form field errors
