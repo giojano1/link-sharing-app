@@ -1,15 +1,14 @@
-import type { Metadata } from "next";
-import { Instrument_Sans } from "next/font/google";
-import "./globals.css";
 import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-const instrument = Instrument_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-instrument-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
   display: "swap",
 });
-
 export const metadata: Metadata = {
   title: "Devlinks App",
   description: "A link management tool for developers.",
@@ -25,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(instrument.variable, "antialiased")}>{children}</body>
+      <body className={cn(inter.variable, "antialiased")}>{children}</body>
     </html>
   );
 }

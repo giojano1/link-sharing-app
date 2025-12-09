@@ -7,7 +7,7 @@ export default function AuthPageWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex w-full flex-col gap-6 p-10  bg-white rounded-[12px] shadow-sm">
+    <section className="flex w-full flex-col gap-6 bg-card text-card-foreground px-6 rounded-xl border py-6 shadow-sm ">
       {children}
     </section>
   );
@@ -21,9 +21,13 @@ AuthPageWrapper.Header = function Header({
   subtitle?: string;
 }) {
   return (
-    <div className="flex flex-col items-start gap-1 text-left">
-      <h2 className="text-2xl font-bold text-dark-grey">{title}</h2>
-      <p className="text-grey text-sm  text-balance">{subtitle}</p>
+    <div className="flex flex-col items-center  text-center">
+      <h2 className="text-xl font-bold ">{title}</h2>
+      {subtitle && (
+        <p className="text-muted-foreground text-sm text-balanced">
+          {subtitle}
+        </p>
+      )}
     </div>
   );
 };
@@ -37,8 +41,8 @@ AuthPageWrapper.Footer = function Footer({
   linkHref: string;
 }) {
   return (
-    <div className="text-center text-sm ">
-      <span className="text-grey">{text} </span>
+    <div className="text-center text-sm font-medium">
+      <span className="text-muted-foreground">{text} </span>
       <Link href={linkHref} className="whitespace-nowrap underline">
         {linkText}
       </Link>
