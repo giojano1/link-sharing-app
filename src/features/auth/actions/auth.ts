@@ -42,7 +42,7 @@ export async function loginAction(formData: FormData) {
 }
 
 // Register action
-export async function registerAction(formData: FormData) {
+export async function registerAction(_prevState: unknown, formData: FormData) {
   const validatedFields = registerSchema.safeParse({
     email: formData.get("email"),
     password: formData.get("password"),
@@ -51,6 +51,7 @@ export async function registerAction(formData: FormData) {
 
   if (!validatedFields.success) {
     return {
+      success: false,
       error: validatedFields.error.flatten().fieldErrors,
     };
   }
@@ -64,7 +65,10 @@ export async function registerAction(formData: FormData) {
     });
 
     if (existingUser) {
-      return { error: "User with this email already exists" };
+      return {
+        success: false,
+        error: { email: ["User with this email already exists"] },
+      };
     }
 
     // Hash password
@@ -87,7 +91,10 @@ export async function registerAction(formData: FormData) {
 
     return { success: true };
   } catch (error) {
-    return { error: "Something went wrong during registration" };
+    return {
+      success: false,
+      error: "Something went wrong during registration",
+    };
   }
 }
 

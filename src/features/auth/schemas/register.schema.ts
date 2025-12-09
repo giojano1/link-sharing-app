@@ -2,16 +2,6 @@ import { z } from "zod";
 
 export const registerSchema = z
   .object({
-    firstName: z
-      .string()
-      .min(2, "First name must be at least 2 characters")
-      .max(100, "First name must be 100 characters or less")
-      .trim(),
-    lastName: z
-      .string()
-      .min(2, "Last name must be at least 2 characters")
-      .max(100, "Last name must be 100 characters or less")
-      .trim(),
     email: z
       .email("Please enter a valid email address")
       .max(255, "Email must be 255 characters or less")
@@ -35,8 +25,6 @@ export const registerSchema = z
 export type RegisterFormType = z.infer<typeof registerSchema>;
 
 export const registerDefaultValues: RegisterFormType = {
-  firstName: "",
-  lastName: "",
   email: "",
   password: "",
   confirmPassword: "",
