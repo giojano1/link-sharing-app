@@ -43,6 +43,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  password      String?   // For credentials login (hashed)
   accounts      Account[]
   sessions      Session[]
 
@@ -57,6 +58,7 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
 
 model VerificationToken {
   identifier String
@@ -83,7 +85,7 @@ model Link {
   @@index([userId, order])
 }
 
-// Optional: Platform types enum for type safety (can also use a separate table)
+
 enum Platform {
   GITHUB
   FRONTEND_MENTOR
