@@ -2,7 +2,7 @@ import { Routes } from "@/constants/routes";
 import LoginForm from "@/features/auth/components/login.form";
 import AuthPageWrapper from "@/features/auth/components/page-wrapper";
 import { Metadata } from "next";
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "Login - Devlinks App",
   description: "Add your details below to get back into the app.",
 };

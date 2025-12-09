@@ -3,7 +3,7 @@ import AuthPageWrapper from "@/features/auth/components/page-wrapper";
 import RegisterForm from "@/features/auth/components/register.form";
 import { Metadata } from "next";
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "Register - Devlinks App",
   description: "Create an account to start managing your links.",
 };

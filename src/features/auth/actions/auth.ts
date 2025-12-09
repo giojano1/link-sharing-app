@@ -90,7 +90,7 @@ export async function registerAction(_prevState: unknown, formData: FormData) {
     });
 
     return { success: true };
-  } catch (error) {
+  } catch {
     return {
       success: false,
       error: "Something went wrong during registration",
