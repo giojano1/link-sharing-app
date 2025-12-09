@@ -16,7 +16,7 @@ export default async function DashboardLayout({
       <div className="shrink-0">
         <Header initialUserData={initialUserData} />
       </div>
-      <section className="w-full flex-1 flex p-6 max-w-[1400px] mx-auto gap-6 min-h-0 overflow-auto">
+      <section className="w-full flex-1 flex p-6 max-500:p-2 max-w-[1400px] mx-auto gap-6 min-h-0 overflow-auto">
         <LinksPreview />
         {children}
       </section>
