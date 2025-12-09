@@ -14,7 +14,7 @@ export default function PageWrapper({
   isPending?: boolean;
 }) {
   return (
-    <section className="bg-white h-full flex flex-col gap-8 flex-1  rounded-[12px] px-10 pt-10 pb-6">
+    <section className="bg-white h-full flex flex-col gap-8 flex-1  rounded-[12px] px-10 max-1100:p-6 pt-10 pb-6">
       <div>
         <h2 className="font-bold text-2xl">{title}</h2>
         <p className="text-sm">{subtitle}</p>

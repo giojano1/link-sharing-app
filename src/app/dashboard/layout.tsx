@@ -13,8 +13,10 @@ export default async function DashboardLayout({
   return (
     <div className="bg-muted flex h-svh flex-col ">
       {/* Pass initial data to client component */}
-      <Header initialUserData={initialUserData} />
-      <section className="w-full h-full flex-1 flex p-6 max-w-[1400px] mx-auto gap-6  ">
+      <div className="shrink-0">
+        <Header initialUserData={initialUserData} />
+      </div>
+      <section className="w-full flex-1 flex p-6 max-w-[1400px] mx-auto gap-6 min-h-0 overflow-auto">
         <LinksPreview />
         {children}
       </section>

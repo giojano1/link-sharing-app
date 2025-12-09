@@ -1,12 +1,11 @@
 "use client";
 
-import { Eye, GalleryVerticalEnd } from "lucide-react";
-import React from "react";
-import { Button } from "../ui/button";
-import Navbar from "./navbar";
-import Link from "next/link";
 import { useCurrentUser } from "@/features/user/hooks/use-current-user";
 import type { UserProfile } from "@/features/user/types/user.types";
+import { Eye, GalleryVerticalEnd } from "lucide-react";
+import Link from "next/link";
+import { Button } from "../ui/button";
+import Navbar from "./navbar";
 
 interface HeaderProps {
   initialUserData: UserProfile | null;
