@@ -8,7 +8,7 @@ export default function LinksPreview() {
   if (isLoading) return <div>Loading...</div>;
   return (
     <div className="w-[550px] max-1250:w-[450px] max-1000:w-[350px] bg-white h-full flex    justify-center items-center rounded-[12px]  overflow-y-auto py-5 max-900:hidden">
-      <div className="h-[calc(100%-250px)] w-[80%] min-h-[600px] max-h-[800px] max-1100:max-h-[650px]  border-2 border-black border-t-10 rounded-4xl shadow-2xl py-10 ">
+      <div className="links-preview-size border-2 border-border border-t-10 rounded-4xl shadow-2xl py-10 ">
         <section>
           <div className="size-24 rounded-full bg-muted flex justify-center items-center mx-auto">
             {user?.publicProfileUrl ? (

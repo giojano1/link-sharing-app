@@ -140,3 +140,9 @@
     box-shadow: 0 0 0 0px white inset !important;
   }
 }
+
+@layer components {
+  .links-preview-size {
+    @apply h-[calc(100%-250px)] w-[80%] min-h-[600px] max-h-[800px] max-1000:max-h-[650px];
+  }
+}
